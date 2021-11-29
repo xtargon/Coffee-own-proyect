@@ -1,0 +1,50 @@
+{% extends 'layaut.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Coffee</title>
+</head>
+<body>
+	{% block Header %}
+
+	<div class="header">
+		<img src="{{ url_for('static', filename='img/header.jpg') }}" class="header_img">
+		<div class="header_overlay">
+			<div class="nav_options">
+				<ul class="content_list">
+					<li class="opt_nav">
+						<div class="opt" onclick="h_box(1)"><i class="header_icon fas fa-shopping-cart"></i> Cart Shopping</div> 
+						<div class="opt" onclick="h_box(2)"><i class="header_icon fas fa-mug-hot"></i> Best Coffee</div> 
+						<div class="opt" onclick="h_box(3)"><i class="header_icon fas fa-address-card"></i> Users Options</div> 
+					</li>
+				</ul>
+			</div>
+			<div class="selected_opt">
+				<div class="header_top_selected">
+					<i class="far fa-circle"></i>
+				</div>
+				<div id="content_selected"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="G_overlay" onclick="exit()">
+	</div>
+	<!--  ↑↓ -->
+	<div class="G_popup">
+		<i onclick="exit()" class="exit_popup far fa-times-circle"></i>
+		<hr>
+		<div id="content_popup"></div>
+	</div>
+	{% endblock Header %}	
+</body>
+</html>
+
+<!--<div class="form_user">	<form><div class="form-group"><label for="User_name">- <i class="fas fa-user"></i> - User Name</label><br>
+<input type="text" class="Inputs_cant" id="User_name" placeholder="Username Here"></div><div class="form-group"><label for="Password">- <i class="fas fa-user-lock"></i> - Password</label><br><input type="text" class="Inputs_cant" id="Password" placeholder="Password Here"></div><button onclick="send_backend(1)"> <i class="btn_frm_us fas fa-unlock-alt"></i> </button></form></div-->
+
+
+
+
+<!--<div class="form_user">	<form><div class="form-group"><label for="User_name">- <i class="fas fa-user"></i> - User Name</label><br><input type="text" class="Inputs_cant" id="User_name-r" placeholder="Username Here"></div><div class="form-group"><label for="User_name">- <i class="fas fa-envelope"></i> - Email</label><br><input type="text" class="Inputs_cant" id="Email-r" placeholder="E-Mail Here"></div><div class="form-group"><label for="Password">- <i class="fas fa-user-lock"></i> - Password</label><br><input type="text" class="Inputs_cant" id="Password-r" placeholder="Password Here"></div><button onclick="send_backend(1)"> <i class="fas fa-star"></i> </button></form></div>-->
